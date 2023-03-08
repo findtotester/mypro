@@ -1,0 +1,175 @@
+{
+  "debug": [
+    {
+      "scene": "case_to_B",
+      "req":{
+        "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+        "Entry": 1,
+	    "IsBiggerThan25": "1",
+	    "IsEnable": 1,
+	    "IsEnableC": 1,
+        "OperId": "4ffc07ae-4f78-4f73-835f-3d6bdae6b7dc",
+	    "OrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+	    "RoleName": "管理员",
+        "RoleNameList": [],
+        "RoleTypeClient": "2",
+        "SelectedOrgId": "6a0376d0-9196-4792-a2ca-f6b6e2d6fc8b",
+        "StoreId": "a5bac1d7-0c0c-4328-8af1-2df7955a0e74",
+        "Type": 2,
+        "UserAccount": "18800000064",
+        "UserId": "3c73f483-0a2f-4838-b04b-58a2eb64ebd0"
+      },
+      "resp": {
+        "IsSuccess": true
+      }
+    }
+  ],
+  "login_case": [
+    {
+      "scene": "case_all_params_null",
+      "req":{
+        "AppId": "",
+        "Account": "",
+        "Password": ""
+      },
+      "resp": {
+        "Message": null,
+        "IsSuccess": false,
+        "StatusCode": null
+      }
+    },
+    {
+      "scene": "case_account_not_exist",
+      "req":{
+        "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+        "Account": "13910098888",
+        "Password": "123456789"
+      },
+      "resp": {
+        "Message": "用户帐号不存在",
+        "IsSuccess": false,
+        "StatusCode": null
+      }
+    },
+    {
+      "scene": "case_pwd_error",
+      "req":{
+        "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+        "Account": "18800000064",
+        "Password": "000000"
+      },
+      "resp": {
+        "Message": "账号或密码不正确1",
+        "IsSuccess": false,
+        "StatusCode": null
+      }
+    },
+    {
+      "scene": "case_login",
+      "req":{
+        "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+        "Account": "18800000064",
+        "Password": "jhtest"
+      },
+      "resp": {
+        "Message": "登录成功",
+        "IsSuccess": true,
+        "StatusCode": null
+      }
+    }
+  ],
+  "GetUserOrgRoles_case": [
+    {
+      "scene": "case_to_B",
+      "req":{
+        "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+        "Entry": 1,
+	    "IsBiggerThan25": "1",
+	    "IsEnable": 1,
+	    "IsEnableC": 1,
+        "OperId": "4ffc07ae-4f78-4f73-835f-3d6bdae6b7dc",
+	    "OrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+	    "RoleName": "管理员",
+        "RoleNameList": [],
+        "RoleTypeClient": "2",
+        "SelectedOrgId": "6a0376d0-9196-4792-a2ca-f6b6e2d6fc8b",
+        "StoreId": "a5bac1d7-0c0c-4328-8af1-2df7955a0e74",
+        "Type": 2,
+        "UserAccount": "18800000064",
+        "UserId": "3c73f483-0a2f-4838-b04b-58a2eb64ebd0"
+      },
+      "resp": {
+        "IsSuccess": true
+      }
+    },
+    {
+      "scene": "case_to_G",
+      "req":{
+          "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+          "Entry": 1,
+          "IsBiggerThan25": "1",
+          "IsEnable": 1,
+          "IsEnableC": 1,
+          "OperId": "",
+          "OrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+          "RoleName": "巡查员",
+          "RoleNameList": ["常用"],
+          "RoleTypeClient": "3",
+          "SelectedOrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+          "StoreId": "",
+          "Type": 2,
+          "UserAccount": "18800000064",
+          "UserId": "3c73f483-0a2f-4838-b04b-58a2eb64ebd0"
+      },
+      "resp": {
+        "IsSuccess": true
+      }
+    },
+    {
+      "scene": "case_to_C",
+      "req":{
+          "AppId": "2fd5f092-d360-4783-b95c-6d47ee5cac44",
+          "Entry": 1,
+          "IsBiggerThan25": "1",
+          "IsEnable": 1,
+          "IsEnableC": 1,
+          "OperId": "",
+          "OrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+          "RoleName": "1",
+          "RoleNameList": [],
+          "RoleTypeClient": "1",
+          "SelectedOrgId": "ab9d121e-0145-41d8-b787-460480290d42",
+          "StoreId": "",
+          "Type": 2,
+          "UserAccount": "18800000064",
+          "UserId": "3c73f483-0a2f-4838-b04b-58a2eb64ebd0"
+      },
+      "resp": {
+        "IsSuccess": true
+      }
+    },
+    {
+      "scene": "case_all_params_null",
+      "req":{
+          "AppId": "",
+          "Entry": "",
+          "IsBiggerThan25": "",
+          "IsEnable": "",
+          "IsEnableC": "",
+          "OperId": "",
+          "OrgId": "",
+          "RoleName": "",
+          "RoleNameList": [],
+          "RoleTypeClient": "",
+          "SelectedOrgId": "",
+          "StoreId": "",
+          "Type": "",
+          "UserAccount": "",
+          "UserId": ""
+      },
+      "resp": {
+        "IsSuccess": false
+      }
+    }
+  ]
+}
