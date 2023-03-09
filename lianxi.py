@@ -81,7 +81,5 @@ a = get_now_datetime()
 b = a.strftime("%Y-%m-%d %H:%M:%S")
 
 
-b = strftime(t,"%m")
-
 
 print(b)

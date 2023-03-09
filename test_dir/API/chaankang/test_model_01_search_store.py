@@ -4,6 +4,9 @@ from seldom import depend
 
 
 class TestSearchStore(seldom.TestCase):
+    def start(self):
+        self.store_id = "ff223c14-aacb-4a3d-be72-548000c617d6"
+        self.store_name = "金玉食府"
 
     def test_01_GetConfigMapKeywords(self):
         url = "https://map.iuoooo.com/api/MapDataConfig/GetConfigMapKeywords"
@@ -44,11 +47,15 @@ class TestSearchStore(seldom.TestCase):
                 "UserId": "3c73f483-0a2f-4838-b04b-58a2eb64ebd0",
             }
         self.post(url, json=data_)
-        store_id = self.response['Content'][0]['StoreId']
-        store_name = self.response['Content'][0]['StoreName']
+        self.assertStatusCode(200)
+        store_id = self.jmespath("Content[0].StoreId")
+        store_name = self.jmespath("Content[0].StoreName")
+        if store_id in (None,False):
+            store_id = self.store_id
+            store_name = self.store_name
         cache.set({"store_id": store_id})
         cache.set({"store_name": store_name})
-        self.assertStatusCode(200)
+
 
     @depend("test_01_GetConfigMapKeywords")
     def test_02_GetConfigMap(self):

@@ -17,8 +17,7 @@ class Test(seldom.TestCase):
         # id_1 = id_.replace('(', '')
         # id_2 = id_1.replace(')', '')
         # id_3 = id_2.replace('\'', '')
-        print("调试：",  id)
-
+        print("调试：",  str(id[0]).replace('\'',''))
 
         # mblConfig = ''.join(re.findall('"mblConfig":(.*?),"JumpSettings"', designHtml))
 
