@@ -53,14 +53,16 @@ class TestSearchStore(seldom.TestCase):
         if store_id in (None,False):
             store_id = self.store_id
             store_name = self.store_name
-        cache.set({"store_id": store_id})
-        cache.set({"store_name": store_name})
+            cache.set({"store_id": store_id})
+            cache.set({"store_name": store_name})
+            raise ArithmeticError
+        else:
+            cache.set({"store_id": store_id})
+            cache.set({"store_name": store_name})
 
 
-    @depend("test_01_GetConfigMapKeywords")
     def test_02_GetConfigMap(self):
         store_id = cache.get("store_id")
-        print("123", store_id)
         url = "https://map.iuoooo.com/api/MapDataConfig/GetConfigMap"
         data_ = {
                 "CenterLat": 39.95993,
